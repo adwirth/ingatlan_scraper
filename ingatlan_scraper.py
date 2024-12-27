@@ -1,5 +1,4 @@
-import cloudscraper
-from bs4 import BeautifulSoup
+from playwright.sync_api import sync_playwright
 import csv
 from datetime import date
 import schedule
@@ -23,65 +22,44 @@ def save_to_csv(data):
         writer = csv.writer(file)
         writer.writerow([data["advert_id"], data["price"], data["area"], data["rooms"], data["district"], data["query_date"], data["first_appearance"]])
 
-# Scraping function
-def scrape_page(url):
-    scraper = cloudscraper.create_scraper()  # Bypass Cloudflare
-    response = scraper.get(url)
-
-    if response.status_code != 200:
-        print(f"Failed to fetch {url}, status code: {response.status_code}")
-        return
-
-    soup = BeautifulSoup(response.text, 'html.parser')
-
-    # Extract individual listings (adjust selectors to match the website's structure)
-    listings = soup.find_all('div', class_='listing')
-    for listing in listings:
-        try:
-            advert_id = listing['data-id']
-            price = listing.find('div', class_='price').text.strip()
-            area = listing.find('div', class_='parameter', {'data-key': 'area'}).text.strip()
-            rooms = listing.find('div', class_='parameter', {'data-key': 'rooms'}).text.strip()
-            district = listing.find('div', class_='parameter', {'data-key': 'district'}).text.strip()
-
-            data = {
-                'advert_id': advert_id,
-                'price': price,
-                'area': area,
-                'rooms': rooms,
-                'district': district,
-                'query_date': str(date.today()),
-                'first_appearance': str(date.today())
-            }
-            save_to_csv(data)
-        except Exception as e:
-            print(f"Error processing listing: {e}")
-
-# Fallback for manual verification using Playwright
-def scrape_with_playwright(url):
-    from playwright.sync_api import sync_playwright
+# Scraping function using Playwright with Firefox
+def scrape_page_with_playwright(url):
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)  # Use headless=False for manual CAPTCHA
+        browser = p.firefox.launch(headless=False)  # Set headless=False for debugging
         context = browser.new_context()
         page = context.new_page()
         page.goto(url)
-
-        print("Please complete any manual verification in the browser.")
-        input("Press Enter after completing verification...")
-
+        page.wait_for_load_state("networkidle")
+        print("Solve the CAPTCHA manually, then press Enter to continue...")
+        input()
         html = page.content()
         browser.close()
 
-        # Process the HTML with BeautifulSoup
+        # Parse the HTML using BeautifulSoup
+        from bs4 import BeautifulSoup
         soup = BeautifulSoup(html, 'html.parser')
-        listings = soup.find_all('div', class_='listing')
+
+        listings = soup.find_all('a', class_='listing-card')
         for listing in listings:
             try:
-                advert_id = listing['data-id']
-                price = listing.find('div', class_='price').text.strip()
-                area = listing.find('div', class_='parameter', {'data-key': 'area'}).text.strip()
-                rooms = listing.find('div', class_='parameter', {'data-key': 'rooms'}).text.strip()
-                district = listing.find('div', class_='parameter', {'data-key': 'district'}).text.strip()
+                # Extract advert ID
+                advert_id = listing.get('data-listing-id', 'N/A')
+
+                # Extract price
+                price_tag = listing.find('span', class_='fw-bold fs-5 text-onyx me-3 font-family-secondary')
+                price = price_tag.text.strip() if price_tag else 'N/A'
+
+                # Extract district
+                district_tag = listing.find('span', class_='d-block fw-500 fs-7 text-onyx font-family-secondary')
+                district = district_tag.text.strip() if district_tag else 'N/A'
+
+                # Extract area
+                area_tag = listing.find('span', text='Alapterület')
+                area = area_tag.find_next_sibling('span', class_='fs-7 text-onyx fw-bold').text.strip() if area_tag else 'N/A'
+
+                # Extract number of rooms
+                rooms_tag = listing.find('span', text='Szobák')
+                rooms = rooms_tag.find_next_sibling('span', class_='fs-7 text-onyx fw-bold').text.strip() if rooms_tag else 'N/A'
 
                 data = {
                     'advert_id': advert_id,
@@ -101,17 +79,17 @@ def scrape_all_pages(base_url, page_count):
     for i in range(1, page_count + 1):
         url = f"{base_url}?page={i}"
         print(f"Scraping page {i}: {url}")
-        try:
-            scrape_page(url)
-        except Exception as e:
-            print(f"Cloudflare block or error occurred: {e}. Falling back to manual verification.")
-            scrape_with_playwright(url)
+        scrape_page_with_playwright(url)
 
 # Scheduling the task
 def daily_task():
-    BASE_URL = "https://ingatlan.com/listings"
-    PAGE_COUNT = 5  # Adjust based on the number of pages to scrape
+    BASE_URL = "https://ingatlan.com/lista/elado+haz+90-130-m2+luxus+duplakomfortos+osszkomfortos+ujszeru+uj-epitesu+200-500-m2telek+csaladi-haz+ikerhaz+epitve-2011-utan+ii-ker+iii-ker+xi-ker+xii-ker"
+    PAGE_COUNT = 1  # Adjust based on the number of pages to scrape
     scrape_all_pages(BASE_URL, PAGE_COUNT)
+
+
+daily_task()
+exit()
 
 schedule.every().day.at("08:00").do(daily_task)
 
@@ -121,4 +99,3 @@ if __name__ == "__main__":
     while True:
         schedule.run_pending()
         time.sleep(60)
-
