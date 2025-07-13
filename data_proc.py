@@ -1,7 +1,7 @@
 import json
 import csv
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 import re
 from collections import defaultdict
 
@@ -42,6 +42,8 @@ def process_json_files(json_dir, csv_file):
         "rooms": "N/A"
     })
 
+    last_query_time = None
+
     # Process each JSON file
     for filename in os.listdir(json_dir):
         print(filename)
@@ -58,6 +60,11 @@ def process_json_files(json_dir, csv_file):
                 except ValueError:
                     # If timestamp parsing fails, use the file's last modified time
                     query_time = datetime.fromtimestamp(os.path.getmtime(json_path))
+                if last_query_time != None:
+                    if query_time > last_query_time:
+                        last_query_time = query_time
+                else:
+                    last_query_time = query_time
 
                 # Process each property listing
                 for property_data in data:
@@ -80,19 +87,24 @@ def process_json_files(json_dir, csv_file):
                     adverts[advert_id]["area"] = area
                     adverts[advert_id]["rooms"] = rooms
 
+    print(last_query_time)
     # Compute derived variables
     for advert_id, data in adverts.items():
         if data["first_query_date"] and data["last_query_date"]:
+            if (last_query_time - data["last_query_date"]) > timedelta(hours=2):
+                data["live"] = False
+            else:
+                data["live"] = True
             data["elapsed_days"] = (data["last_query_date"] - data["first_query_date"]).days
             data["first_query_date"] = data["first_query_date"].strftime("%Y-%m-%d")
             data["last_query_date"] = data["last_query_date"].strftime("%Y-%m-%d")
-
+                                
         data["price_change"] = float(data['last_price']) - float(data['first_price'])
         data['unit_price'] = float(data['last_price']) / float(data['area'])
         
 
     # Write summary to CSV
-    header = ["advertId", "district", "first_query_date", "elapsed_days", "first_price", "last_price", "area", "rooms", "unit_price", "price_change"]
+    header = ["advertId", "live", "district", "first_query_date", "last_query_date","elapsed_days", "first_price", "last_price", "area", "rooms", "unit_price", "price_change"]
     with open(csv_file, mode="w", newline="", encoding="utf-8") as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(header)
@@ -100,8 +112,10 @@ def process_json_files(json_dir, csv_file):
         for advert_id, data in adverts.items():
             writer.writerow([
                 advert_id,
+                data["live"],
                 data["district"],
                 data["first_query_date"],
+                data["last_query_date"],
                 data["elapsed_days"],
                 data["first_price"],
                 data["last_price"],

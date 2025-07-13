@@ -1,0 +1,142 @@
+[
+  {
+    "advertId": "34378761",
+    "price": "179,90 M Ft",
+    "district": "Budapest III. kerület, Tarhos utca 156.",
+    "area": "112 m2",
+    "rooms": "5"
+  },
+  {
+    "advertId": "34378786",
+    "price": "199,90 M Ft",
+    "district": "Budapest III. kerület, Tarhos utca 156.",
+    "area": "112 m2",
+    "rooms": "5"
+  },
+  {
+    "advertId": "34090899",
+    "price": "157,50 M Ft",
+    "district": "Budapest III. kerület, Jutas köz 4.",
+    "area": "122 m2",
+    "rooms": "4"
+  },
+  {
+    "advertId": "34335453",
+    "price": "189,90 M Ft",
+    "district": "Budapest III. kerület, Ürömhegy",
+    "area": "130 m2",
+    "rooms": "4"
+  },
+  {
+    "advertId": "34472491",
+    "price": "214 M Ft",
+    "district": "Budapest III. kerület, Jutas utca",
+    "area": "100 m2",
+    "rooms": "5"
+  },
+  {
+    "advertId": "34596580",
+    "price": "183,75 M Ft",
+    "district": "Budapest III. kerület, Aranyhegy",
+    "area": "105 m2",
+    "rooms": "4"
+  },
+  {
+    "advertId": "34576978",
+    "price": "189,90 M Ft",
+    "district": "Budapest III. kerület, Ürömhegy",
+    "area": "120 m2",
+    "rooms": "4"
+  },
+  {
+    "advertId": "34538165",
+    "price": "189 M Ft",
+    "district": "Budapest III. kerület, Ürömhegy",
+    "area": "103 m2",
+    "rooms": "4"
+  },
+  {
+    "advertId": "32687768",
+    "price": "180 M Ft",
+    "district": "Budapest III. kerület, Csillaghegy",
+    "area": "120 m2",
+    "rooms": "4"
+  },
+  {
+    "advertId": "33412443",
+    "price": "180 M Ft",
+    "district": "Budapest III. kerület, Csillaghegy",
+    "area": "120 m2",
+    "rooms": "5"
+  },
+  {
+    "advertId": "34227039",
+    "price": "228 M Ft",
+    "district": "Budapest XI. kerület, Szerelmey Miklós utca",
+    "area": "130 m2",
+    "rooms": "5 + 1 fél"
+  },
+  {
+    "advertId": "34594773",
+    "price": "189,90 M Ft",
+    "district": "Budapest III. kerület, Óarany utca 32.",
+    "area": "115 m2",
+    "rooms": "4"
+  },
+  {
+    "advertId": "34588885",
+    "price": "179 M Ft",
+    "district": "Budapest III. kerület, Bécsi út",
+    "area": "112 m2",
+    "rooms": "4"
+  },
+  {
+    "advertId": "34333588",
+    "price": "189 M Ft",
+    "district": "Budapest III. kerület, Ürömfű utca",
+    "area": "104 m2",
+    "rooms": "4"
+  },
+  {
+    "advertId": "34565624",
+    "price": "229,90 M Ft",
+    "district": "Budapest III. kerület, Ürömhegy",
+    "area": "127 m2",
+    "rooms": "4"
+  },
+  {
+    "advertId": "33810693",
+    "price": "182 M Ft",
+    "district": "Budapest III. kerület, Ürömhegy",
+    "area": "105 m2",
+    "rooms": "5"
+  },
+  {
+    "advertId": "33643923",
+    "price": "228 M Ft",
+    "district": "Budapest III. kerület, Csillaghegy",
+    "area": "130 m2",
+    "rooms": "5"
+  },
+  {
+    "advertId": "34543570",
+    "price": "139,90 M Ft",
+    "district": "Budapest III. kerület, Ürömhegy",
+    "area": "100 m2",
+    "rooms": "3 + 1 fél"
+  },
+  {
+    "advertId": "34216971",
+    "price": "170 M Ft",
+    "district": "Budapest III. kerület, Csillaghegy",
+    "area": "125 m2",
+    "rooms": "4"
+  },
+  {
+    "advertId": "34497250",
+    "price": "184 M Ft",
+    "district": "Budapest XI. kerület, Madárhegy",
+    "area": "129 m2",
+    "rooms": "5"
+  }
+]

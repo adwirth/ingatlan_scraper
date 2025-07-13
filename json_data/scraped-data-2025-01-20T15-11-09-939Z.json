@@ -1,0 +1,51 @@
+[
+  {
+    "advertId": "32687768",
+    "price": "168 M Ft",
+    "district": "Budapest III. kerület, Csillaghegy",
+    "area": "120 m2",
+    "rooms": "4"
+  },
+  {
+    "advertId": "34366994",
+    "price": "264,70 M Ft",
+    "district": "Budapest II. kerület, II/A kerület - Budaliget",
+    "area": "130 m2",
+    "rooms": "5 + 1 fél"
+  },
+  {
+    "advertId": "34227039",
+    "price": "219 M Ft",
+    "district": "Budapest XI. kerület, Szerelmey Miklós utca",
+    "area": "130 m2",
+    "rooms": "5 + 1 fél"
+  },
+  {
+    "advertId": "34496580",
+    "price": "164,99 M Ft",
+    "district": "Budapest II. kerület, Jegesmedve lejtő",
+    "area": "120 m2",
+    "rooms": "5"
+  },
+  {
+    "advertId": "34445329",
+    "price": "264,70 M Ft",
+    "district": "Budapest II. kerület, II/A kerület - Budaliget",
+    "area": "122 m2",
+    "rooms": "4"
+  },
+  {
+    "advertId": "34017384",
+    "price": "275 M Ft",
+    "district": "Budapest XII. kerület, Diós árok",
+    "area": "120 m2",
+    "rooms": "3"
+  },
+  {
+    "advertId": "33127761",
+    "price": "208 M Ft",
+    "district": "Budapest III. kerület, Ürömhegy",
+    "area": "120 m2",
+    "rooms": "5"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "advertId": "34497250",
+    "price": "184 M Ft",
+    "district": "Budapest XI. kerület, Madárhegy",
+    "area": "129 m2",
+    "rooms": "5"
+  },
+  {
+    "advertId": "34445329",
+    "price": "249 M Ft",
+    "district": "Budapest II. kerület, II/A kerület - Budaliget",
+    "area": "122 m2",
+    "rooms": "4"
+  },
+  {
+    "advertId": "34002024",
+    "price": "249 M Ft",
+    "district": "Budapest II. kerület, II/A kerület - Budaliget",
+    "area": "122 m2",
+    "rooms": "4"
+  },
+  {
+    "advertId": "34611180",
+    "price": "279 M Ft",
+    "district": "Budapest XII. kerület, Denevér út",
+    "area": "124 m2",
+    "rooms": "4"
+  },
+  {
+    "advertId": "33973446",
+    "price": "249 M Ft",
+    "district": "Budapest II. kerület, II/A kerület - Budaliget",
+    "area": "116 m2",
+    "rooms": "4"
+  },
+  {
+    "advertId": "33898265",
+    "price": "249 M Ft",
+    "district": "Budapest III. kerület, Ürömhegy",
+    "area": "130 m2",
+    "rooms": "5 + 1 fél"
+  },
+  {
+    "advertId": "34025397",
+    "price": "265 M Ft",
+    "district": "Budapest II. kerület, Előd vezér utca",
+    "area": "122 m2",
+    "rooms": "4"
+  },
+  {
+    "advertId": "34496580",
+    "price": "164,99 M Ft",
+    "district": "Budapest II. kerület, Jegesmedve lejtő",
+    "area": "120 m2",
+    "rooms": "5"
+  },
+  {
+    "advertId": "33920599",
+    "price": "180 M Ft",
+    "district": "Budapest III. kerület, Naplemente utca",
+    "area": "120 m2",
+    "rooms": "4"
+  },
+  {
+    "advertId": "34378786",
+    "price": "189,90 M Ft",
+    "district": "Budapest III. kerület, Tarhos utca 156.",
+    "area": "112 m2",
+    "rooms": "5"
+  },
+  {
+    "advertId": "34025501",
+    "price": "265 M Ft",
+    "district": "Budapest II. kerület, Előd vezér utca",
+    "area": "122 m2",
+    "rooms": "4"
+  },
+  {
+    "advertId": "33127761",
+    "price": "208 M Ft",
+    "district": "Budapest III. kerület, Ürömhegy",
+    "area": "120 m2",
+    "rooms": "5"
+  }
+]
