@@ -1,0 +1,50 @@
+advertId,district,first_query_date,elapsed_days,first_price,last_price,area,rooms,unit_price,price_change
+34378761,"Budapest III. kerület, Tarhos utca 156.",27/12/2024,68,179.9,169.9,112,5,1.516964286,-10
+34144137,"Budapest III. kerület, Aranyhegy",27/12/2024,19,149,149,95,3.5,1.568421053,0
+34090899,"Budapest III. kerület, Jutas köz 4.",27/12/2024,68,157.5,157.5,122,4,1.290983607,0
+33484732,"Budapest III. kerület, Aranyhegy",27/12/2024,26,183.75,183.75,105,4,1.75,0
+34378786,"Budapest III. kerület, Tarhos utca 156.",27/12/2024,68,199.9,189.9,112,5,1.695535714,-10
+34335453,"Budapest III. kerület, Ürömhegy",27/12/2024,59,189.9,189.9,130,4,1.460769231,0
+34509222,"Budapest III. kerület, Ürömhegy",27/12/2024,16,189,189,103,4,1.834951456,0
+33412443,"Budapest III. kerület, Csillaghegy",27/12/2024,68,168,180,120,5,1.5,12
+33810693,"Budapest III. kerület, Ürömhegy",27/12/2024,68,182,182,105,5,1.733333333,0
+33643923,"Budapest III. kerület, Csillaghegy",27/12/2024,68,228,227,130,5,1.746153846,-1
+33085862,"Budapest III. kerület, Aranyhegy",27/12/2024,5,155,155,108,4.5,1.435185185,0
+34216971,"Budapest III. kerület, Csillaghegy",27/12/2024,68,150,170,125,4,1.36,20
+34385800,"Budapest III. kerület, Aranyhegy",27/12/2024,68,179.9,183.75,105,4,1.75,3.85
+34333588,"Budapest III. kerület, Ürömfű utca",27/12/2024,68,189,189,104,4,1.817307692,0
+34419123,"Budapest III. kerület, Csillaghegy",27/12/2024,6,269,269,130,4,2.069230769,0
+34497250,"Budapest XI. kerület, Madárhegy",27/12/2024,65,184,184,129,5,1.426356589,0
+34511721,"Budapest III. kerület, Ürömhegy",27/12/2024,26,245,245,127,4,1.929133858,0
+34002024,"Budapest II. kerület, II/A kerület - Budaliget",27/12/2024,68,265,249,122,4,2.040983607,-16
+34025501,"Budapest II. kerület, Előd vezér utca",27/12/2024,68,265,265,122,4,2.172131148,0
+33973446,"Budapest II. kerület, II/A kerület - Budaliget",27/12/2024,68,265,249,116,4,2.146551724,-16
+34025397,"Budapest II. kerület, Előd vezér utca",27/12/2024,68,265,265,122,4,2.172131148,0
+34496580,"Budapest II. kerület, Jegesmedve lejtő",27/12/2024,68,164.99,164.99,120,5,1.374916667,0
+32687768,"Budapest III. kerület, Csillaghegy",27/12/2024,68,168,180,120,4,1.5,12
+34366994,"Budapest II. kerület, II/A kerület - Budaliget",27/12/2024,61,265,249,130,5.5,1.915384615,-16
+34227039,"Budapest XI. kerület, Szerelmey Miklós utca",27/12/2024,68,219,228,130,5.5,1.753846154,9
+34194794,"Budapest III. kerület, Tarhos utca",27/12/2024,9,194.9,194.9,130,4,1.499230769,0
+34445329,"Budapest II. kerület, II/A kerület - Budaliget",27/12/2024,68,264.7,249,122,4,2.040983607,-15.7
+33920599,"Budapest III. kerület, Naplemente utca",27/12/2024,68,170,180,120,4,1.5,10
+33127761,"Budapest III. kerület, Ürömhegy",27/12/2024,68,208,208,120,5,1.733333333,0
+34538165,"Budapest III. kerület, Ürömhegy",16/01/2025,49,189,189,103,4,1.834951456,0
+34017384,"Budapest XII. kerület, Diós árok",20/01/2025,36,275,275,120,3,2.291666667,0
+34017099,"Budapest III. kerület, Csillaghegy",20/01/2025,16,159,169,100,4,1.69,10
+34543570,"Budapest III. kerület, Ürömhegy",20/01/2025,36,139.9,139.9,100,3.5,1.399,0
+34565624,"Budapest III. kerület, Ürömhegy",30/01/2025,35,229.9,229.9,127,4,1.81023622,0
+34562064,"Budapest III. kerület, Ürömfű utca",30/01/2025,35,192,192,104,4,1.846153846,0
+34537887,"Budapest III. kerület, Ürömhegy",08/02/2025,10,234.5,234.5,126,4,1.861111111,0
+34576978,"Budapest III. kerület, Ürömhegy",08/02/2025,26,189.9,189.9,120,4,1.5825,0
+34258112,"Budapest XII. kerület, Denevér út",08/02/2025,10,279,279,124,4,2.25,0
+33898265,"Budapest III. kerület, Ürömhegy",08/02/2025,26,249,249,130,5.5,1.915384615,0
+34588885,"Budapest III. kerület, Bécsi út",10/02/2025,15,179,179,112,4,1.598214286,0
+34596580,"Budapest III. kerület, Aranyhegy",15/02/2025,18,183.75,183.75,105,4,1.75,0
+34594773,"Budapest III. kerület, Óarany utca 32.",15/02/2025,18,189.9,189.9,115,4,1.651304348,0
+34594638,"Budapest III. kerület, Jutas utca",15/02/2025,18,189.9,189.9,115,5,1.651304348,0
+34472491,"Budapest III. kerület, Jutas utca",19/02/2025,15,214,214,100,5,2.14,0
+34611180,"Budapest XII. kerület, Denevér út",25/02/2025,8,279,279,124,4,2.25,0
+34613053,"Budapest XI. kerület, Madárhegy",25/02/2025,1,180.95,180.95,104,4,1.739903846,0
+34546016,"Budapest III. kerület, Jeles utca",25/02/2025,8,189.9,189.9,125,4,1.5192,0
+33512440,"Budapest III. kerület, Testvérhegy",03/03/2025,2,199,199,125,5,1.592,0
+34627717,"Budapest II. kerület, II/A kerület - Adyliget",03/03/2025,0,179.9,179.9,125,4,1.4392,0
